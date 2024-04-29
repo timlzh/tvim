@@ -1,11 +1,10 @@
 wsl = true
-neovim-bin = "~/.local/bin/nvim"
 
 [font]
-normal = ["Delugia PL"]
+normal = ["CaskaydiaCove Nerd Font"]
 size = 14
 
 [font.features]
 # simple compiler & simulator
 # -> => != <> >= 0 1 2 3
-"Delugia PL" = ["-ss01", "+ss02", "+ss04", "+ss05", "+ss06", "+zero", "+onum"]
+"CaskaydiaCove Nerd Font" = ["+ss01", "+ss02", "+ss04", "+ss05", "+ss06", "+zero", "+onum"]
