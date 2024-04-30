@@ -2,6 +2,13 @@
 
 A neovim configuration based on [LazyVim](https://github.com/LazyVim/LazyVim) along with a neovide configuration.
 
+## Demo
+
+![menu](assets/menu.png)
+
+![editor](assets/editor.png)
+
+
 ## Usage
 
 ### Automatic Installation (Recommended)
