@@ -1,7 +1,5 @@
-wsl = true
-
 [font]
-normal = ["CaskaydiaCove Nerd Font"]
+normal = ["CaskaydiaCove Nerd Font", "Sarasa Mono SC Nerd Font"]
 size = 14
 
 [font.features]

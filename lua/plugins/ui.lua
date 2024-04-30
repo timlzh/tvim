@@ -76,9 +76,32 @@ return {
           footer = function()
             local stats = require("lazy").stats()
             local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+
             local nvim_version = vim.fn.execute("version")
             nvim_version = string.match(nvim_version, "NVIM v[%d.]+")
-            local info = os.date("%A, %d %B %Y") .. " | " .. nvim_version
+
+            -- non-unicode date format to avoid encoding issues
+            local week_days = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" }
+            local week_day = week_days[tonumber(os.date("%w"))]
+            local months = {
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+              "October",
+              "November",
+              "December",
+            }
+            local month = months[tonumber(os.date("%m"))]
+            local date = week_day .. ", " .. os.date("%d") .. " " .. month .. " " .. os.date("%Y")
+
+            local info = date .. " | " .. nvim_version
+
             return {
               -- "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms",
               -- "",
