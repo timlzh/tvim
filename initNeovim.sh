@@ -97,6 +97,7 @@ if [ $IS_WSL = true ]; then
 fi
 
 # Download Sarasa Nerd Font
+info "Downloading fonts..."
 style="mono"
 orthography="sc"
 sarasaFontFileName="sarasa-${style}-${orthography}-nerd-font.zip"
@@ -112,6 +113,7 @@ curl -fsSL "https://api.github.com/repos/jonz94/Sarasa-Gothic-Nerd-Fonts/release
 	xargs curl -fL -o "/tmp/${sarasaFontFileName}"
 
 # Download Cascadia Code Nerd Font
+info "Downloading Cascadia Code Nerd Font..."
 url="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaCode.zip"
 rm -f "/tmp/CascadiaCode.zip"
 wget $url -O "/tmp/CascadiaCode.zip"
@@ -152,3 +154,5 @@ else
 		installFontForWindows "\$ENV:USERPROFILE/Documents/Fonts/CascadiaCode"
 	fi
 fi
+
+info "Neovim and Neovide installed successfully. Enjoy!"

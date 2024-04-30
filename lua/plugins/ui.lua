@@ -82,7 +82,7 @@ return {
 
             -- non-unicode date format to avoid encoding issues
             local week_days = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" }
-            local week_day = week_days[tonumber(os.date("%w"))]
+            local week_day = week_days[tonumber(os.date("%w")) + 1]
             local months = {
               "January",
               "February",
