@@ -5,11 +5,12 @@
     "lazyvim.plugins.extras.lang.go",
     "lazyvim.plugins.extras.lang.java",
     "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.lang.php",
     "lazyvim.plugins.extras.lang.python",
     "lazyvim.plugins.extras.util.gitui"
   ],
   "news": {
-    "NEWS.md": "3415"
+    "NEWS.md": "6520"
   },
-  "version": 3
+  "version": 6
 }
