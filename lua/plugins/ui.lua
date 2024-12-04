@@ -10,7 +10,17 @@ return {
     },
   },
   {
+    "folke/snacks.nvim",
+    opts = {
+      terminal = {
+        win = { position = "float" },
+      },
+      dashboard = { enabled = false },
+    },
+  },
+  {
     "nvimdev/dashboard-nvim",
+    lazy = false,
     opts = function()
       --       local logo = [[
       --  |\/\/\/|

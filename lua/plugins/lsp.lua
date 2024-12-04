@@ -1,5 +1,15 @@
 return {
   {
+    "kiyoon/jupynium.nvim",
+    build = "pip3 install --user . --break-system-packages",
+    -- build = "conda run --no-capture-output -n jupynium pip install .",
+    -- enabled = vim.fn.isdirectory(vim.fn.expand "~/miniconda3/envs/jupynium"),
+    dependencies = {
+      "rcarriga/nvim-notify", -- optional
+      "stevearc/dressing.nvim", -- optional, UI for :JupyniumKernelSelect
+    },
+  },
+  {
     "nvimdev/lspsaga.nvim",
     event = "LspAttach",
     config = function()
@@ -52,5 +62,16 @@ return {
         "html",
       }, { mode = "background" })
     end,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        pyright = {
+          mason = false,
+          autostart = false,
+        },
+      },
+    },
   },
 }
